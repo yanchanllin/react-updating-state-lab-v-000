@@ -39,7 +39,7 @@ handleClick = () => {
 render () {
     return (
         <div >
-        <<button className='bitrate' onClick={this.handleClick}>{this.state.settings.bitrate}</button>
+        <button className='bitrate' onClick={this.handleClick}>{this.state.settings.bitrate}</button>
             <button className='resolution' onClick={this.handleClickResolution}>{this.state.settings.video.resolution}</button>
             </div>
     )};
