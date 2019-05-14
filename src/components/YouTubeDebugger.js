@@ -12,14 +12,36 @@ constructor() {
       video: {
       resolution: '1080p'
     }
+  }
+ }
 }
 
+handleClick = () => {
+       this.setState({
+           settings: {
+             ...this.state.settings,
+             bitrate: 12,
+           },
+       })
+   }
+
+   handleClickResolution = () => {
+       this.setState({
+           settings: {
+             ...this.state.settings,
+               video: {
+                   ...this.state.settings.video,
+                 resolution: '720p',
+               },
+           },
+       })
+   }
 render () {
     return (
         <div >
-        <button class='bitrate' onClick= {this.state.settings.bitrate=12}></button>
-        <button class='resolution' onClick= {this.state.settings.video.resolution='720p'}></button>
-        </div>
+        <<button className='bitrate' onClick={this.handleClick}>{this.state.settings.bitrate}</button>
+            <button className='resolution' onClick={this.handleClickResolution}>{this.state.settings.video.resolution}</button>
+            </div>
     )};
 }
 
